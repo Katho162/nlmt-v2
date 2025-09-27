@@ -60,3 +60,20 @@ python scripts/tune_hyperparameters.py --n-trials 100
 ```
 
 This will run 100 trials and print the best hyperparameters found. The best hyperparameters will also be saved to a `best_hyperparameters.json` file, which you can then use to train the final model.
+
+## API Usage
+
+To run the FastAPI application, use the following command:
+
+```bash
+uvicorn nlmt_v2.api.main:app --reload --app-dir src
+```
+
+This will start a local server. You can then send a POST request to `http://127.0.0.1:8000/recommend` with a JSON body like this:
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{
+  "known_languages": ["English", "Japanese"],
+  "top_k": 5
+}' http://127.0.0.1:8000/recommend
+```
