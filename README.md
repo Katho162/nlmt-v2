@@ -7,7 +7,7 @@ This project is a language recommender system that suggests languages for users 
 1. **Clone the repository:**
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Katho162/nlmt-v2
    cd nlmt-v2
    ```
 
