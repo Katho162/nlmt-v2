@@ -1,0 +1,2 @@
+[console_scripts]
+recommend = nlmt_v2.main:main
