@@ -1,0 +1,6 @@
+{
+    "latent_dim": 250,
+    "learning_rate": 0.001035781140872826,
+    "epochs": 47,
+    "batch_size": 256
+}
