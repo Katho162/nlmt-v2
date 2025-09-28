@@ -1,7 +1,0 @@
-pandas
-numpy
-torch
-scikit-learn
-fastapi
-uvicorn
-optuna
