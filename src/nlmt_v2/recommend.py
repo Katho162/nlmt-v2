@@ -26,7 +26,11 @@ def recommend(known_languages: list[str], top_k: int = 10):
     with open(languages_path, "rb") as f:
         languages = pickle.load(f)
     
-    model = VAERecommender(len(languages), latent_dim=64)
+    import json
+    hyperparameters_path = "best_hyperparameters.json"
+    with open(hyperparameters_path, "r") as f:
+        hyperparameters = json.load(f)
+    model = VAERecommender(len(languages), latent_dim=hyperparameters["latent_dim"])
     model.load_state_dict(torch.load(latest_model_path))
     model.eval()
 
